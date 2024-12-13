@@ -1,58 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<title>bonesrunhome</title>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.violet.min.css"
+		/>
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<!-- Minimal theme switcher -->
+	<script src="js/minimal-theme-switcher.js"></script>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark" />
-    <title>bonesrunhome</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.violet.min.css">
-    <link href="styles.css" rel="stylesheet">
-</head>
-<!-- Minimal theme switcher -->
-<script src="js/minimal-theme-switcher.js"></script>
+	<body>
+		<header>
+			<nav>
+				<ul id="theme-picker">
+					<li><a href="#" data-theme-switcher="light">Light</a></li>
+					<li><a href="#" data-theme-switcher="dark">Dark</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>The server that runs a whole lot of nothing</h2>
+			<p>
+				bonesrunhome is an IBM x3550 M4 - it currently is sitting on my desk in
+				my bedroom, so I have a lovely 1U space heater
+			</p>
+			<p>
+				I wound up with it as UCC (UWA's
+				<a href="https://ucc.asn.au">University Computer Club</a>) was throwing
+				out a bunch of them due to the unfortunate habit they had of kamikazing
+				themselves. Thankfully there was one remaining that hadn't blown up and
+				with a firmware update it should hopefully not blow up anytime soon :P
+			</p>
+			<p>
+				It currently has two Xeon E5-2697 v2's (24 total cores at 3.50GHz) and
+				384GB of RAM with Alma linux as it's operating system, however the end
+				goal for this server is to buy a rack (I now have a rack! See
+				<a href="myRack.html">myRack</a>) and move it into my living room (sorry
+				housemates), chuck in a number of SSD's for storage (I may also add a
+				10Gbps nic too) - and then I'll need to find something to run on it lol.
+				I will probably turn this into my main server, replacing
+				<a href="bonescallhome.html">bonescallhome </a> (due to this being a
+				fair bit more powerful) and end up converting bonescallhome into a
+				pfsense router.
+			</p>
+		</main>
+		<footer>
+			<a href="/"> Main Page </a>
+		</footer>
+	</body>
 
-<body>
-
-    <header>
-
-        <nav>
-
-            <ul>
-
-                <li><a href="#" data-theme-switcher="light">Light</a></li>
-                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-
-        <h2>The server that runs a whole lot of nothing</h2>
-        <p>bonesrunhome is an IBM x3550 M4 - it currently is sitting on my desk in my bedroom, so I have a lovely 1U
-            space
-            heater</p>
-        <p>I wound up with it as UCC (UWA's <a href="https://ucc.asn.au">University Computer Club</a>) was throwing out
-            a bunch
-            of them due to the unfortunate habit they had of kamikazing themselves. Thankfully there was one remaining
-            that
-            hadn't blown up and with a firmware update it should hopefully not blow up anytime soon :P</p>
-        <p>It currently has two Xeon E5-2697 v2's (24 total cores at 3.50GHz) and 384GB of RAM with Alma linux as it's operating
-            system, however the end goal for this server is to buy a rack (I now have a rack! See <a
-                href="myRack.html">myRack</a>) and move it into my living room (sorry housemates), chuck in a
-            number of SSD's for storage (I may also add a 10Gbps nic too) - and then I'll need to find something to run
-            on it
-            lol. I will probably turn this into my main server, replacing <a href="bonescallhome.html">bonescallhome
-            </a> (due to this being a fair bit more powerful) and
-            end up converting bonescallhome into a pfsense router.</p>
-
-    </main>
-    <footer>
-        <a href="index.html"> Main Page </a>
-    </footer>
-</body>
-
-
-<!-- Modal -->
-<script src="js/modal.js"></script>
-
+	<!-- Modal -->
+	<script src="js/modal.js"></script>
 </html>
