@@ -7,6 +7,9 @@ a:hover { text-decoration: underline; }
 a:active { text-decoration: underline; }
 
 
+
+
+
 code { font-family: 'Fira Code', monospace; }
 
 @supports (font-variation-settings: normal) {
@@ -40,7 +43,51 @@ Little more spacing between lists
 .spacing {
   padding-top: 2vh;
   padding-bottom: 3vh;
+  display: flex;
+  align-items: flex-top;
+  flex-wrap: wrap;
+  gap: 8;
 }
+
+.racklist {
+  flex-grow: 3;
+  flex-basis: 170px;
+}
+notRackList {
+  flex-grow: 1;
+  flex-basis: 170px;
+}
+
+
+.content {
+    background: orange;
+    margin: 1rem;
+    padding: 1rem;
+    flex: 1;
+    color: white;
+    display: flex;
+}
+
+.content > span {
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    flex: 1
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: red;
+}
+
+
+
 /* Colour Scheming below here
 
 /* Orange color for light color scheme (Default) */
