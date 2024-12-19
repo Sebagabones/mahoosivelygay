@@ -4,6 +4,7 @@
  * Pico.css - https://picocss.com
  * Copyright 2019-2024 - Licensed under MIT
  */
+
 const THEME_OWNER = document.documentElement;
 const THEME_STORAGE_KEY = 'theme';
 const cachedTheme = localStorage.getItem(THEME_STORAGE_KEY);

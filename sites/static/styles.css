@@ -1,10 +1,17 @@
+@import url(https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.violet.min.css);
+/* @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@6.2/distr/fira_code.css); */
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:active { text-decoration: underline; }
 
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@6.2/distr/fira_code.css);
 
+code { font-family: 'Fira Code', monospace; }
+
+@supports (font-variation-settings: normal) {
+  code { font-family: 'Fira Code VF', monospace; }
+}
 :root{
   font-family: 'Fira Code', monospace;
   --pico-font-family-sans-serif: 'Fira Code', monospace;
@@ -16,13 +23,25 @@ a:active { text-decoration: underline; }
     text-align:justify;
 }
 
-/* Little more spacing between lists */
+Little more spacing between lists
 .projects li + li {
   margin-top: 10px;
 }
 
+.figDiv {
+  text-align: center;
+}
 
-/* Colour Scheming below here */
+.fullFrontalRack {
+  width:90%;
+  max-width:575px;
+}
+
+.spacing {
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+}
+/* Colour Scheming below here
 
 /* Orange color for light color scheme (Default) */
 /* Can be forced with data-theme="light" */
