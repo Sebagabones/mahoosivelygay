@@ -3,7 +3,8 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 /* From here */
 
-html {
+
+:root {
   color-scheme: light dark;
 }
 
