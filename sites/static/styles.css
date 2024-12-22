@@ -15,10 +15,6 @@ html[data-theme=dark] {
   color-scheme: dark;
 }
 
-.data-theme-toggle {
-
-  background: light-dark(#aaa, #444);
-}
 
 /* To here */
 a:link { text-decoration: none; }
