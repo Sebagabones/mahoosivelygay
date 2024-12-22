@@ -1,19 +1,10 @@
-/*!
- * Minimal theme switcher
- *
- * Pico.css - https://picocss.com
- * Copyright 2019-2024 - Licensed under MIT
- */
 
 const THEME_OWNER = document.documentElement;
 const THEME_STORAGE_KEY = 'theme';
-const cachedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-if (cachedTheme) {
-  THEME_OWNER.dataset[THEME_STORAGE_KEY] = cachedTheme;
+const localStorageTheme2 = localStorage.getItem("theme");
+const systemSettingDark2 = window.matchMedia("(prefers-color-scheme: dark)");
 
-  document.querySelector("html")?.setAttribute(this.rootAttribute, cachedTheme);
-
-}
+// const currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 document.addEventListener('DOMContentLoaded', () => {
 const themeSwitcher = {
   // Config
@@ -22,25 +13,33 @@ const themeSwitcher = {
   buttonsTarget: "a[data-theme-switcher]",
   buttonAttribute: "data-theme-switcher",
   rootAttribute: "data-theme",
-  localStorageKey: "picoPreferredColorScheme",
+  localStorageKey: "theme",
+
+
+
+
+  calculateSettingAsThemeString({ localStorageTheme2, systemSettingDark2 }) {
+  if (localStorageTheme2 !== null) {
+    return localStorageTheme2;
+  }
+
+  if (systemSettingDark2.matches) {
+    return "dark";
+  }
+
+  return "light";
+  },
 
   // Init
   init() {
-    this.scheme = this.schemeFromLocalStorage;
+    this.scheme = this.calculateSettingAsThemeString({ localStorageTheme2, systemSettingDark2 });
+
     this.initSwitchers();
   },
 
-  // Get color scheme from local storage
-  get schemeFromLocalStorage() {
-    return window.localStorage?.getItem(this.localStorageKey) ?? this._scheme;
-  },
 
-  // Preferred color scheme
-  get preferredColorScheme() {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
-  },
 
-  // Init switchers
+//   // Init switchers
   initSwitchers() {
     const buttons = document.querySelectorAll(this.buttonsTarget);
     buttons.forEach((button) => {
@@ -48,9 +47,15 @@ const themeSwitcher = {
         "click",
         (event) => {
           event.preventDefault();
-          // Set scheme
-          this.scheme = button.getAttribute(this.buttonAttribute);
-          // Close dropdown
+          buttonThemePressed = button.getAttribute(this.buttonAttribute);
+
+          if (buttonThemePressed == "dark" || buttonThemePressed == "light") {
+
+            document.querySelector("html")?.setAttribute(this.rootAttribute, buttonThemePressed);
+
+            window.localStorage?.setItem(THEME_STORAGE_KEY, buttonThemePressed);
+
+          }
           document.querySelector(this.menuTarget)?.removeAttribute("open");
         },
         false
@@ -58,39 +63,8 @@ const themeSwitcher = {
     });
   },
 
-  // Set scheme
-  set scheme(scheme) {
-    if (scheme == "auto") {
-      this._scheme = this.preferredColorScheme;
-      delete THEME_OWNER.dataset[THEME_STORAGE_KEY];
-      localStorage.removeItem(THEME_STORAGE_KEY);
-    } else if (scheme == "dark" || scheme == "light") {
-      this._scheme = scheme;
-    }
-    this.applyScheme();
-    this.schemeToLocalStorage();
-    THEME_OWNER.dataset[THEME_STORAGE_KEY] = this.scheme;
-    localStorage.setItem(THEME_STORAGE_KEY, this.scheme);
-
-  },
-
-  // Get scheme
-  get scheme() {
-    return this._scheme;
-  },
-
-  // Apply scheme
-  applyScheme() {
-    document.querySelector("html")?.setAttribute(this.rootAttribute, this.scheme);
-  },
-    // Store scheme to local storage
-  schemeToLocalStorage() {
-    window.localStorage?.setItem(this.localStorageKey, this.scheme);
-  },
-
 };
 
 
-// Init
 themeSwitcher.init();
 });

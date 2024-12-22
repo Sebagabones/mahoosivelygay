@@ -17,9 +17,12 @@
 			}
 		</style>
 	</noscript>
+
+<!-- Theme Checker before load -->
+<script src="js/anotherThemeChanger.js"></script>
 </head>
 <!-- Minimal theme switcher -->
-<script src="/js/minimal-theme-switcher.js"></script>
+<script src="js/minimal-theme-switcher.js"></script>
 <!-- Preloading images -->
 <script src="js/preloadImages.js"></script>
 
@@ -29,6 +32,12 @@
 			<ul id="theme-picker">
 				<li><a href="#" data-theme-switcher="light">Light</a></li>
 				<li><a href="#" data-theme-switcher="dark">Dark</a></li>
+	<button
+		class="data-theme-toggle"
+    type="button"
+    data-theme-toggle
+    aria-label="Change to light theme"
+  >Change to light theme (or icon here)</button>
 			</ul>
 		</nav>
 	</header>
