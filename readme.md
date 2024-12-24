@@ -1,6 +1,8 @@
-# mahoosively gay fr
+# Mahoosively Gay FR
 
-my personal website, nothing fancy because i cant stand websites with overkill JavaScript, so it is pretty straight forward using PicoCSS and good old HTML with a tad of JavaScript 
+My personal website, with minimal Javascript because I prefer a lightweight simple website.
 
-available [here](https://mahoosively.gay/)
+This is setup to use [SSRI](https://github.com/Sebagabones/Server-Side-Rendered-Includes) as a templating tool.
+
+Available [here](https://mahoosively.gay/).
 
