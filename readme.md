@@ -1,4 +1,4 @@
-# Mahoosively Gay FR
+# mahoosively gay fr
 
 My personal website, with minimal Javascript because I prefer a lightweight simple website.
 
