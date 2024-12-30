@@ -42,8 +42,30 @@
 				<summary>
 					<h4 style="display:inline"><code>init.el</code>:</h4>
 				</summary>
-				
-    <pre><span></span><span class="p">(</span><span class="nv">doom!</span>
+				<div class="syntax"><pre><span></span><span class="c1">;;; init.el -*- lexical-binding: t; -*-</span>
+
+<span class="c1">;; This file controls what Doom modules are enabled and what order they load</span>
+<span class="c1">;; in. Remember to run &#39;doom sync&#39; after modifying it!</span>
+
+<span class="c1">;; NOTE Press &#39;SPC h d h&#39; (or &#39;C-h d h&#39; for non-vim users) to access Doom&#39;s</span>
+<span class="c1">;;      documentation. There you&#39;ll find a link to Doom&#39;s Module Index where all</span>
+<span class="c1">;;      of our modules are listed, including what flags they support.</span>
+
+<span class="c1">;; NOTE Move your cursor over a module&#39;s name (or its flags) and press &#39;K&#39; (or</span>
+<span class="c1">;;      &#39;C-c c k&#39; for non-vim users) to view its documentation. This works on</span>
+<span class="c1">;;      flags as well (those symbols that start with a plus).</span>
+<span class="c1">;;</span>
+<span class="c1">;;      Alternatively, press &#39;gd&#39; (or &#39;C-c c d&#39;) on a module to browse its</span>
+<span class="c1">;;      directory (for easy access to its source code).</span>
+
+
+
+<span class="p">(</span><span class="nv">doom!</span><span class="w"> </span><span class="nb">:input</span>
+<span class="w">       </span><span class="c1">;;bidi              ; (tfel ot) thgir etirw uoy gnipleh</span>
+<span class="w">       </span><span class="c1">;;chinese</span>
+<span class="w">       </span><span class="c1">;;japanese</span>
+<span class="w">       </span><span class="c1">;;layout            ; auie,ctsrnm is the superior home row</span>
+
 <span class="w">       </span><span class="nb">:completion</span>
 <span class="w">       </span><span class="c1">;;company           ; the ultimate code completion backend</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">corfu</span><span class="w"> </span><span class="nv">+orderless</span><span class="w"> </span><span class="nv">+dabbrev</span><span class="w"> </span><span class="nv">+info</span><span class="w"> </span><span class="nv">+history</span><span class="w"> </span><span class="nv">+indexed</span><span class="w"> </span><span class="nv">+echo</span><span class="w"> </span><span class="nv">+cape</span><span class="p">)</span><span class="w">  </span><span class="c1">; complete with cap(f), cape and a flying feather!</span>
@@ -56,7 +78,7 @@
 <span class="w">       </span><span class="c1">;;deft              ; notational velocity for Emacs</span>
 <span class="w">       </span><span class="nv">doom</span><span class="w">              </span><span class="c1">; what makes DOOM look the way it does</span>
 <span class="w">       </span><span class="nv">doom-dashboard</span><span class="w">    </span><span class="c1">; a nifty splash screen for Emacs</span>
-<span class="w">       </span><span class="c1">;;doom-quit         ; DOOM quit-message prompts when you quit Emacs</span>
+<span class="w">       </span><span class="nv">doom-quit</span><span class="w">         </span><span class="c1">; DOOM quit-message prompts when you quit Emacs</span>
 <span class="w">       </span><span class="c1">;;(emoji +unicode)  ; 🙂</span>
 <span class="w">       </span><span class="nv">hl-todo</span><span class="w">           </span><span class="c1">; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW</span>
 <span class="w">       </span><span class="c1">;;indent-guides     ; highlighted indent columns</span>
@@ -84,6 +106,8 @@
 <span class="w">       </span><span class="c1">;;god               ; run Emacs commands without modifier keys</span>
 <span class="w">       </span><span class="c1">;;lispy             ; vim for lisp, for people who don&#39;t like vim</span>
 <span class="w">       </span><span class="nv">multiple-cursors</span><span class="w">  </span><span class="c1">; editing in many places at once</span>
+<span class="w">       </span><span class="c1">;;objed             ; text object editing for the innocent</span>
+<span class="w">       </span><span class="c1">;;parinfer          ; turn lisp into python, sort of</span>
 <span class="w">       </span><span class="c1">;;rotate-text       ; cycle region at point between text candidates</span>
 <span class="w">       </span><span class="nv">snippets</span><span class="w">          </span><span class="c1">; my elves. They type so I don&#39;t have to</span>
 <span class="w">       </span><span class="c1">;;word-wrap         ; soft wrapping with language-aware indent</span>
@@ -97,6 +121,8 @@
 <span class="w">       </span><span class="nv">vc</span><span class="w">                </span><span class="c1">; version-control and Emacs, sitting in a tree</span>
 
 <span class="w">       </span><span class="nb">:term</span>
+<span class="w">       </span><span class="c1">;;eshell            ; the elisp shell that works everywhere</span>
+<span class="w">       </span><span class="c1">;;shell             ; simple shell REPL for Emacs</span>
 <span class="w">       </span><span class="c1">;;term              ; basic terminal emulator for Emacs</span>
 <span class="w">       </span><span class="nv">vterm</span><span class="w">             </span><span class="c1">; the best terminal emulation in Emacs</span>
 
@@ -106,15 +132,26 @@
 <span class="w">       </span><span class="c1">;;grammar           ; tasing grammar mistake every you make</span>
 
 <span class="w">       </span><span class="nb">:tools</span>
+<span class="w">       </span><span class="c1">;;ansible</span>
+<span class="w">       </span><span class="c1">;;biblio            ; Writes a PhD for you (citation needed)</span>
 <span class="w">       </span><span class="c1">;;collab            ; buffers with friends</span>
 <span class="w">       </span><span class="nv">debugger</span><span class="w">          </span><span class="c1">; FIXME stepping through code, to help you add bugs</span>
 <span class="w">       </span><span class="c1">;;direnv</span>
+<span class="w">       </span><span class="c1">;;docker</span>
+<span class="w">       </span><span class="c1">;;editorconfig      ; let someone else argue about tabs vs spaces</span>
+<span class="w">       </span><span class="c1">;;ein               ; tame Jupyter notebooks with emacs</span>
 <span class="w">       </span><span class="p">(</span><span class="nf">eval</span><span class="w"> </span><span class="nv">+overlay</span><span class="p">)</span><span class="w">     </span><span class="c1">; run code, run (also, repls)</span>
 <span class="w">       </span><span class="nv">lookup</span><span class="w">              </span><span class="c1">; navigate your code and its documentation</span>
 <span class="w">       </span><span class="nv">lsp</span><span class="w">               </span><span class="c1">; M-x vscode</span>
 <span class="w">       </span><span class="nv">magit</span><span class="w">             </span><span class="c1">; a git porcelain for Emacs</span>
 <span class="w">       </span><span class="c1">;;make              ; run make tasks from Emacs</span>
-
+<span class="w">       </span><span class="c1">;;pass              ; password manager for nerds</span>
+<span class="w">       </span><span class="c1">;;pdf               ; pdf enhancements</span>
+<span class="w">       </span><span class="c1">;;prodigy           ; FIXME managing external services &amp; code builders</span>
+<span class="w">       </span><span class="c1">;;terraform         ; infrastructure as code</span>
+<span class="w">       </span><span class="c1">;;tmux              ; an API for interacting with tmux</span>
+<span class="w">       </span><span class="c1">;; tree-sitter       ; syntax and parsing, sitting in a tree...</span>
+<span class="w">       </span><span class="c1">;;upload            ; map local to remote projects via ssh/ftp</span>
 
 <span class="w">       </span><span class="nb">:os</span>
 <span class="w">       </span><span class="c1">;;(:if (featurep :system &#39;macos) macos)  ; improve compatibility with macOS</span>
@@ -125,9 +162,24 @@
 <span class="w">       </span><span class="c1">;;beancount         ; mind the GAAP</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">cc</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">         </span><span class="c1">; C &gt; C++ == 1</span>
 <span class="w">       </span><span class="c1">;;clojure           ; java with a lisp</span>
+<span class="w">       </span><span class="c1">;;common-lisp       ; if you&#39;ve seen one lisp, you&#39;ve seen them all</span>
+<span class="w">       </span><span class="c1">;;coq               ; proofs-as-programs</span>
+<span class="w">       </span><span class="c1">;;crystal           ; ruby at the speed of c</span>
+<span class="w">       </span><span class="c1">;;csharp            ; unity, .NET, and mono shenanigans</span>
+<span class="w">       </span><span class="c1">;;data              ; config/data formats</span>
+<span class="w">       </span><span class="c1">;;(dart +flutter)   ; paint ui and not much else</span>
+<span class="w">       </span><span class="c1">;;dhall</span>
+<span class="w">       </span><span class="c1">;;elixir            ; erlang done right</span>
 <span class="w">       </span><span class="c1">;;elm               ; care for a cup of TEA?</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">emacs-lisp</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">        </span><span class="c1">; drown in parentheses</span>
 <span class="w">       </span><span class="c1">;;erlang            ; an elegant language for a more civilized age</span>
+<span class="w">       </span><span class="c1">;;ess               ; emacs speaks statistics</span>
+<span class="w">       </span><span class="c1">;;factor</span>
+<span class="w">       </span><span class="c1">;;faust             ; dsp, but you get to keep your soul</span>
+<span class="w">       </span><span class="c1">;;fortran           ; in FORTRAN, GOD is REAL (unless declared INTEGER)</span>
+<span class="w">       </span><span class="c1">;;fsharp            ; ML stands for Microsoft&#39;s Language</span>
+<span class="w">       </span><span class="c1">;;fstar             ; (dependent) types and (monadic) effects and Z3</span>
+<span class="w">       </span><span class="c1">;;gdscript          ; the language you waited for</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">go</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">         </span><span class="c1">; the hipster dialect</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">graphql</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">    </span><span class="c1">; Give queries a REST</span>
 <span class="w">       </span><span class="c1">;;(haskell +lsp)    ; a language that&#39;s lazier than I am</span>
@@ -137,7 +189,11 @@
 <span class="w">       </span><span class="p">(</span><span class="nv">java</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">       </span><span class="c1">; the poster child for carpal tunnel syndrome</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">javascript</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">        </span><span class="c1">; all(hope(abandon(ye(who(enter(here))))))</span>
 <span class="w">       </span><span class="c1">;;julia             ; a better, faster MATLAB</span>
-<span class="w">       </span><span class="c1">;;lua               ; one-based indices? one-based indices</span>
+<span class="w">       </span><span class="c1">;;kotlin            ; a better, slicker Java(Script)</span>
+<span class="w">       </span><span class="c1">;;latex             ; writing papers in Emacs has never been so fun</span>
+<span class="w">       </span><span class="c1">;;lean              ; for folks with too much to prove</span>
+<span class="w">       </span><span class="c1">;;ledger            ; be audit you can be</span>
+<span class="w">       </span><span class="p">(</span><span class="nv">lua</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">               </span><span class="c1">; one-based indices? one-based indices</span>
 <span class="w">       </span><span class="nv">markdown</span><span class="w">          </span><span class="c1">; writing docs for people to ignore</span>
 <span class="w">       </span><span class="c1">;;nim               ; python + lisp at the speed of c</span>
 <span class="w">       </span><span class="c1">;;nix               ; I hereby declare &quot;nix geht mehr!&quot;</span>
@@ -148,15 +204,45 @@
 <span class="w">       </span><span class="c1">;;graphviz          ; diagrams for confusing yourself even more</span>
 <span class="w">       </span><span class="c1">;;purescript        ; javascript, but functional</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">python</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">            </span><span class="c1">; beautiful is better than ugly</span>
+<span class="w">       </span><span class="c1">;;qt                ; the &#39;cutest&#39; gui framework ever</span>
+<span class="w">       </span><span class="c1">;;racket            ; a DSL for DSLs</span>
+<span class="w">       </span><span class="c1">;;raku              ; the artist formerly known as perl6</span>
+<span class="w">       </span><span class="c1">;;rest              ; Emacs as a REST client</span>
+<span class="w">       </span><span class="c1">;;rst               ; ReST in peace</span>
+<span class="w">       </span><span class="p">(</span><span class="nv">ruby</span><span class="w"> </span><span class="nv">+rails</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">     </span><span class="c1">; 1.step {|i| p &quot;Ruby is #{i.even? ? &#39;love&#39; : &#39;life&#39;}&quot;}</span>
+<span class="w">       </span><span class="c1">;;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()</span>
+<span class="w">       </span><span class="c1">;;scala             ; java, but good</span>
+<span class="w">       </span><span class="c1">;;(scheme +guile)   ; a fully conniving family of lisps</span>
+<span class="w">       </span><span class="c1">;;sh                ; she sells {ba,z,fi}sh shells on the C xor</span>
+<span class="w">       </span><span class="c1">;;sml</span>
+<span class="w">       </span><span class="c1">;;solidity          ; do you need a blockchain? No.</span>
+<span class="w">       </span><span class="c1">;;swift             ; who asked for emoji variables?</span>
+<span class="w">       </span><span class="c1">;;terra             ; Earth and Moon in alignment for performance.</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">web</span><span class="w"> </span><span class="nv">+lsp</span><span class="p">)</span><span class="w">               </span><span class="c1">; the tubes</span>
+<span class="w">       </span><span class="c1">;;yaml              ; JSON, but readable</span>
+<span class="w">       </span><span class="c1">;;zig               ; C, but simpler</span>
 
+<span class="w">       </span><span class="nb">:email</span>
+<span class="w">       </span><span class="c1">;;(mu4e +org +gmail)</span>
+<span class="w">       </span><span class="c1">;;notmuch</span>
+<span class="w">       </span><span class="c1">;;(wanderlust +gmail)</span>
+
+<span class="w">       </span><span class="nb">:app</span>
+<span class="w">       </span><span class="c1">;;calendar</span>
+<span class="w">       </span><span class="c1">;;emms</span>
+<span class="w">       </span><span class="c1">;;everywhere        ; *leave* Emacs!? You must be joking</span>
+<span class="w">       </span><span class="c1">;;irc               ; how neckbeards socialize</span>
+<span class="w">       </span><span class="c1">;;(rss +org)        ; emacs as an RSS reader</span>
+
+<span class="w">       </span><span class="nb">:config</span>
+<span class="w">       </span><span class="c1">;;literate</span>
 <span class="w">       </span><span class="p">(</span><span class="nv">default</span><span class="w"> </span><span class="nv">+bindings</span><span class="w"> </span><span class="nv">+smartparens</span><span class="p">))</span>
 
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">package-native-compile</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 <span class="c1">;; Set garbage collection threshold to 1GB.</span>
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">gc-cons-threshold</span><span class="w"> </span><span class="p">(</span><span class="nf">*</span><span class="w"> </span><span class="mi">2048</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="mi">750</span><span class="p">))</span>
-<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">read-process-output-max</span><span class="w"> </span><span class="p">(</span><span class="nf">*</span><span class="w"> </span><span class="mi">2048</span><span class="w"> </span><span class="mi">2048</span><span class="p">))</span><span class="w"> </span><span class="c1">;; 1mb
-</pre>
+<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">read-process-output-max</span><span class="w"> </span><span class="p">(</span><span class="nf">*</span><span class="w"> </span><span class="mi">2048</span><span class="w"> </span><span class="mi">2048</span><span class="p">))</span><span class="w"> </span><span class="c1">;; 1mb</span>
+</pre></div>
 
 			</details>
 
@@ -164,8 +250,17 @@
 				<summary>
 					<h4 style="display:inline"><code>packages.el</code>:</h4>
 				</summary>
-				
-				<pre><span></span><span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">corfu-terminal</span><span class="p">)</span>
+				<div class="syntax"><pre><span></span><span class="c1">;; -*- no-byte-compile: t; -*-</span>
+<span class="c1">;;; $DOOMDIR/packages.el</span>
+
+<span class="c1">;; To install a package with Doom you must declare them here and run &#39;doom sync&#39;</span>
+<span class="c1">;; on the command line, then restart Emacs for the changes to take effect -- or</span>
+<span class="c1">;; use &#39;M-x doom/reload&#39;.</span>
+
+
+<span class="c1">;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:</span>
+<span class="c1">;; (package! some-package)</span>
+<span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">corfu-terminal</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">nerd-icons-corfu</span><span class="p">)</span>
 
 <span class="w"> </span><span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">corfu-doc-terminal</span>
@@ -178,7 +273,66 @@
 <span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">clipetty</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">comment-dwim-2</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">lsp-pyright</span><span class="p">)</span>
-</pre>
+<span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">catppuccin-theme</span><span class="p">)</span>
+<span class="w">  </span><span class="c1">;; package.el</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">tera-mode</span>
+<span class="w">    </span><span class="nb">:recipe</span><span class="w"> </span><span class="p">(</span><span class="nb">:host</span><span class="w"> </span><span class="nv">github</span><span class="w"> </span><span class="nb">:repo</span><span class="w"> </span><span class="s">&quot;svavs/tera-mode&quot;</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nv">package!</span><span class="w"> </span><span class="nv">eee</span>
+<span class="w">  </span><span class="nb">:recipe</span><span class="w"> </span><span class="p">(</span><span class="nb">:host</span><span class="w"> </span><span class="nv">github</span><span class="w"> </span><span class="nb">:repo</span><span class="w"> </span><span class="s">&quot;Sebagabones/eee.el&quot;</span>
+<span class="w">           </span><span class="nb">:files</span><span class="w"> </span><span class="p">(</span><span class="nb">:defaults</span><span class="w"> </span><span class="s">&quot;*.el&quot;</span><span class="w"> </span><span class="s">&quot;*.sh&quot;</span><span class="p">)))</span>
+
+
+<span class="c1">;; (package! eee</span>
+<span class="c1">;;   :recipe (:host github :repo &quot;eval-exec/eee.el&quot;</span>
+<span class="c1">;;            :files (:defaults &quot;*.el&quot; &quot;*.sh&quot;)))</span>
+<span class="c1">;; (package! eee</span>
+<span class="c1">;;   :recipe (:local-repo &quot;/home/bones/Storage/MyProjects/eee.el/&quot;))</span>
+
+
+
+
+<span class="c1">;; (package! lsp-ui)</span>
+<span class="c1">;; To install a package directly from a remote git repo, you must specify a</span>
+<span class="c1">;; `:recipe&#39;. You&#39;ll find documentation on what `:recipe&#39; accepts here:</span>
+<span class="c1">;; https://github.com/radian-software/straight.el#the-recipe-format</span>
+<span class="c1">;; (package! another-package</span>
+<span class="c1">;;   :recipe (:host github :repo &quot;username/repo&quot;))</span>
+
+<span class="c1">;; If the package you are trying to install does not contain a PACKAGENAME.el</span>
+<span class="c1">;; file, or is located in a subdirectory of the repo, you&#39;ll need to specify</span>
+<span class="c1">;; `:files&#39; in the `:recipe&#39;:</span>
+<span class="c1">;; (package! this-package</span>
+<span class="c1">;;   :recipe (:host github :repo &quot;username/repo&quot;</span>
+<span class="c1">;;            :files (&quot;some-file.el&quot; &quot;src/lisp/*.el&quot;)))</span>
+
+<span class="c1">;; If you&#39;d like to disable a package included with Doom, you can do so here</span>
+<span class="c1">;; with the `:disable&#39; property:</span>
+<span class="c1">;; (package! builtin-package :disable t)</span>
+
+<span class="c1">;; You can override the recipe of a built in package without having to specify</span>
+<span class="c1">;; all the properties for `:recipe&#39;. These will inherit the rest of its recipe</span>
+<span class="c1">;; from Doom or MELPA/ELPA/Emacsmirror:</span>
+<span class="c1">;; (package! builtin-package :recipe (:nonrecursive t))</span>
+<span class="c1">;; (package! builtin-package-2 :recipe (:repo &quot;myfork/package&quot;))</span>
+
+<span class="c1">;; Specify a `:branch&#39; to install a package from a particular branch or tag.</span>
+<span class="c1">;; This is required for some packages whose default branch isn&#39;t &#39;master&#39; (which</span>
+<span class="c1">;; our package manager can&#39;t deal with; see radian-software/straight.el#279)</span>
+<span class="c1">;; (package! builtin-package :recipe (:branch &quot;develop&quot;))</span>
+
+<span class="c1">;; Use `:pin&#39; to specify a particular commit to install.</span>
+<span class="c1">;; (package! builtin-package :pin &quot;1a2b3c4d5e&quot;)</span>
+
+
+<span class="c1">;; Doom&#39;s packages are pinned to a specific commit and updated from release to</span>
+<span class="c1">;; release. The `unpin!&#39; macro allows you to unpin single packages...</span>
+<span class="c1">;; (unpin! pinned-package)</span>
+<span class="c1">;; ...or multiple packages</span>
+<span class="c1">;; (unpin! pinned-package another-pinned-package)</span>
+<span class="c1">;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)</span>
+<span class="c1">;; (unpin! t)</span>
+</pre></div>
 
 			</details>
 
@@ -187,20 +341,90 @@
 				<summary>
 					<h4 style="display:inline"><code>config.el</code>:</h4>
 				</summary>
-				<pre><span></span><span class="c1">;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-</span>
+				<div class="syntax"><pre><span></span><span class="c1">;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-</span>
 
 <span class="c1">;; Place your private configuration here! Remember, you do not need to run &#39;doom</span>
 <span class="c1">;; sync&#39; after modifying this file!</span>
 
 
+<span class="c1">;; Some functionality uses this to identify you, e.g. GPG configuration, email</span>
+<span class="c1">;; clients, file templates and snippets. It is optional.</span>
+<span class="c1">;; (setq user-full-name &quot;John Doe&quot;</span>
+<span class="c1">;;       user-mail-address &quot;john@doe.com&quot;)</span>
+
+<span class="c1">;; Doom exposes five (optional) variables for controlling fonts in Doom:</span>
+<span class="c1">;;</span>
+<span class="c1">;; - `doom-font&#39; -- the primary font to use</span>
+<span class="c1">;; - `doom-variable-pitch-font&#39; -- a non-monospace font (where applicable)</span>
+<span class="c1">;; - `doom-big-font&#39; -- used for `doom-big-font-mode&#39;; use this for</span>
+<span class="c1">;;   presentations or streaming.</span>
+<span class="c1">;; - `doom-symbol-font&#39; -- for symbols</span>
+<span class="c1">;; - `doom-serif-font&#39; -- for the `fixed-pitch-serif&#39; face</span>
+<span class="c1">;;</span>
+<span class="c1">;; See &#39;C-h v doom-font&#39; for documentation and more examples of what they</span>
+<span class="c1">;; accept. For example:</span>
+<span class="c1">;;</span>
+<span class="c1">;;(setq doom-font (font-spec :family &quot;Fira Code&quot; :size 12 :weight &#39;semi-light)</span>
+<span class="c1">;;      doom-variable-pitch-font (font-spec :family &quot;Fira Sans&quot; :size 13))</span>
+<span class="c1">;;</span>
+<span class="c1">;; If you or Emacs can&#39;t find your font, use &#39;M-x describe-font&#39; to look them</span>
+<span class="c1">;; up, `M-x eval-region&#39; to execute elisp code, and &#39;M-x doom/reload-font&#39; to</span>
+<span class="c1">;; refresh your font settings. If Emacs still can&#39;t find your font, it likely</span>
+<span class="c1">;; wasn&#39;t installed correctly. Font issues are rarely Doom issues!</span>
+
+<span class="c1">;; There are two ways to load a theme. Both assume the theme is installed and</span>
+<span class="c1">;; available. You can either set `doom-theme&#39; or manually load a theme with the</span>
+<span class="c1">;; `load-theme&#39; function. This is the default:</span>
 
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">doom-theme</span><span class="w"> </span><span class="ss">&#39;doom-tokyo-night</span><span class="p">)</span>
 
-
+<span class="c1">;; (setq doom-theme &#39;catppuccin)</span>
+<span class="c1">;; This determines the style of line numbers in effect. If set to `nil&#39;, line</span>
+<span class="c1">;; numbers are disabled. For relative line numbers, set this to `relative&#39;.</span>
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">display-line-numbers-type</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 
-
+<span class="c1">;; If you use `org&#39; and don&#39;t want your org files in the default location below,</span>
+<span class="c1">;; change `org-directory&#39;. It must be set before org loads!</span>
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">org-directory</span><span class="w"> </span><span class="s">&quot;~/org/&quot;</span><span class="p">)</span>
+
+
+<span class="c1">;; Whenever you reconfigure a package, make sure to wrap your config in an</span>
+<span class="c1">;; `after!&#39; block, otherwise Doom&#39;s defaults may override your settings. E.g.</span>
+<span class="c1">;;</span>
+<span class="c1">;;   (after! PACKAGE</span>
+<span class="c1">;;     (setq x y))</span>
+<span class="c1">;;</span>
+<span class="c1">;; The exceptions to this rule:</span>
+<span class="c1">;;</span>
+<span class="c1">;;   - Setting file/directory variables (like `org-directory&#39;)</span>
+<span class="c1">;;   - Setting variables which explicitly tell you to set them before their</span>
+<span class="c1">;;     package is loaded (see &#39;C-h v VARIABLE&#39; to look up their documentation).</span>
+<span class="c1">;;   - Setting doom variables (which start with &#39;doom-&#39; or &#39;+&#39;).</span>
+<span class="c1">;;</span>
+<span class="c1">;; Here are some additional functions/macros that will help you configure Doom.</span>
+<span class="c1">;;</span>
+<span class="c1">;; - `load!&#39; for loading external *.el files relative to this one</span>
+<span class="c1">;; - `use-package!&#39; for configuring packages</span>
+<span class="c1">;; - `after!&#39; for running code after a package has loaded</span>
+<span class="c1">;; - `add-load-path!&#39; for adding directories to the `load-path&#39;, relative to</span>
+<span class="c1">;;   this file. Emacs searches the `load-path&#39; when you load packages with</span>
+<span class="c1">;;   `require&#39; or `use-package&#39;.</span>
+<span class="c1">;; - `map!&#39; for binding new keys</span>
+<span class="c1">;;</span>
+<span class="c1">;; To get information about any of these functions/macros, move the cursor over</span>
+<span class="c1">;; the highlighted symbol at press &#39;K&#39; (non-evil users must press &#39;C-c c k&#39;).</span>
+<span class="c1">;; This will open documentation for it, including demos of how they are used.</span>
+<span class="c1">;; Alternatively, use `C-h o&#39; to look up a symbol (functions, variables, faces,</span>
+<span class="c1">;; etc).</span>
+<span class="c1">;;</span>
+<span class="c1">;; You can also try &#39;gd&#39; (or &#39;C-c c d&#39;) to jump to their definition and see how</span>
+<span class="c1">;; they are implemented.</span>
+
+
+
+<span class="c1">;; (unless (display-graphic-p)</span>
+<span class="c1">;;   (corfu-terminal-mode +1))</span>
+<span class="c1">;; ;; (add-hook &#39;corfu-mode-hook #&#39;corfu-doc-mode)</span>
 
 <span class="c1">;; Corfu</span>
 
@@ -221,9 +445,7 @@
 
 <span class="c1">;; The Custom interface is also supported for tuning the variable above.</span>
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">kill-whole-line</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nf">user-full-name</span><span class="w"> </span><span class="s">&quot;Seb REDACATED&quot;</span><span class="w">    </span><span class="c1">;Really hope I remember to like,</span>
-<span class="w">                                        </span><span class="c1">;update these when I copy this into my setup lmao</span>
-<span class="w">      </span><span class="nv">user-mail-address</span><span class="w"> </span><span class="s">&quot;niceTry@sucker.thisisntaTLD&quot;</span><span class="p">)</span>
+
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auto-save-default</span><span class="w"> </span><span class="no">t</span>
 <span class="w">      </span><span class="nv">make-backup-files</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">confirm-kill-emacs</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span>
@@ -263,6 +485,13 @@
 <span class="p">(</span><span class="nv">use-package!</span><span class="w"> </span><span class="nv">eshell-follow</span>
 <span class="w">  </span><span class="nb">:after-call</span><span class="w"> </span><span class="nv">eshell-follow-global-mode</span><span class="p">)</span>
 
+<span class="c1">;; (defadvice kill-region (before slick-cut activate compile)</span>
+<span class="c1">;;   &quot;When called interactively with no active region, kill a single line instead.&quot;</span>
+<span class="c1">;;   (interactive</span>
+<span class="c1">;;    (if mark-active</span>
+<span class="c1">;;        (list (region-beginning) (region-end))</span>
+<span class="c1">;;      (list (line-beginning-position) (line-beginning-position 2)))))</span>
+
 
 <span class="p">(</span><span class="nb">defadvice</span><span class="w"> </span><span class="nv">kill-ring-save</span><span class="w"> </span><span class="p">(</span><span class="nv">before</span><span class="w"> </span><span class="nv">slick-copy</span><span class="w"> </span><span class="nv">activate</span><span class="w"> </span><span class="nv">compile</span><span class="p">)</span>
 <span class="w">  </span><span class="s">&quot;When called interactively with no active region, copy a single line instead.&quot;</span>
@@ -271,6 +500,14 @@
 <span class="w">       </span><span class="p">(</span><span class="nf">list</span><span class="w"> </span><span class="p">(</span><span class="nf">region-beginning</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">region-end</span><span class="p">))</span>
 <span class="w">     </span><span class="p">(</span><span class="nf">message</span><span class="w"> </span><span class="s">&quot;Copied line&quot;</span><span class="p">)</span>
 <span class="w">     </span><span class="p">(</span><span class="nf">list</span><span class="w"> </span><span class="p">(</span><span class="nf">line-beginning-position</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nf">line-beginning-position</span><span class="w"> </span><span class="mi">2</span><span class="p">)))))</span>
+
+<span class="c1">;; (defadvice comment-or-uncomment-region (before slick-comment activate compile)</span>
+<span class="c1">;;   &quot;When called interactively with no active region, commment/uncomment a single line instead.&quot;</span>
+<span class="c1">;;   (interactive</span>
+<span class="c1">;;    (if mark-active</span>
+<span class="c1">;;        (</span>
+<span class="c1">;;         (list (region-beginning) (region-end)))</span>
+<span class="c1">;;      (list (line-beginning-position) (line-beginning-position 2)))))</span>
 
 <span class="p">(</span><span class="nb">defadvice</span><span class="w"> </span><span class="nv">kill-ring-save</span><span class="w"> </span><span class="p">(</span><span class="nv">after</span><span class="w"> </span><span class="nv">keep-transient-mark-active</span><span class="w"> </span><span class="p">())</span><span class="w"> </span><span class="c1">;</span>
 <span class="w">  </span><span class="s">&quot;Override the deactivation of the mark.&quot;</span>
@@ -343,7 +580,6 @@
 
 <span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-x C-t&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;ivy-switch-buffer-other-window</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-&lt;tab&gt;&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;+ivy/switch-workspace-buffer</span><span class="p">)</span>
-
 <span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">persp-emacsclient-init-frame-behaviour-override</span><span class="w"> </span><span class="s">&quot;main&quot;</span><span class="p">)</span>
 
 <span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-c SPC&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;avy-goto-char</span><span class="p">)</span>
@@ -376,6 +612,49 @@
 <span class="w">  </span><span class="p">)</span>
 
 
+<span class="c1">;; (use-package lsp-mode</span>
+<span class="c1">;;   :hook ((c-mode          ; clangd</span>
+<span class="c1">;;           c++-mode        ; clangd</span>
+<span class="c1">;;           c-or-c++-mode   ; clangd</span>
+<span class="c1">;;           java-mode       ; eclipse-jdtls</span>
+<span class="c1">;;           js-mode         ; ts-ls (tsserver wrapper)</span>
+<span class="c1">;;           js-jsx-mode     ; ts-ls (tsserver wrapper)</span>
+<span class="c1">;;           typescript-mode ; ts-ls (tsserver wrapper)</span>
+<span class="c1">;;           python-mode     ; pyright</span>
+<span class="c1">;;           web-mode        ; ts-ls/HTML/CSS</span>
+<span class="c1">;;           haskell-mode    ; haskell-language-server</span>
+<span class="c1">;;           ) . lsp-deferred)</span>
+<span class="c1">;;   :commands lsp</span>
+<span class="c1">;;   :config</span>
+<span class="c1">;;   (setq lsp-auto-guess-root t)</span>
+<span class="c1">;;   (setq lsp-log-io nil)</span>
+<span class="c1">;;   (setq lsp-restart &#39;auto-restart)</span>
+<span class="c1">;;   (setq lsp-enable-symbol-highlighting nil)</span>
+<span class="c1">;;   (setq lsp-enable-on-type-formatting nil)</span>
+<span class="c1">;;   (setq lsp-signature-auto-activate nil)</span>
+<span class="c1">;;   (setq lsp-signature-render-documentation nil)</span>
+<span class="c1">;;   (setq lsp-eldoc-hook nil)</span>
+<span class="c1">;;   (setq lsp-modeline-code-actions-enable nil)</span>
+<span class="c1">;;   (setq lsp-modeline-diagnostics-enable nil)</span>
+<span class="c1">;;   (setq lsp-headerline-breadcrumb-enable nil)</span>
+<span class="c1">;;   (setq lsp-semantic-tokens-enable nil)</span>
+<span class="c1">;;   (setq lsp-enable-folding nil)</span>
+<span class="c1">;;   (setq lsp-enable-imenu nil)</span>
+<span class="c1">;;   (setq lsp-enable-snippet nil)</span>
+<span class="c1">;;   (setq read-process-output-max (* 1024 1024)) ;; 1MB</span>
+<span class="c1">;;   (setq lsp-idle-delay 0.5))</span>
+
+
+
+<span class="c1">;; (use-package lsp-ui</span>
+<span class="c1">;;   :commands lsp-ui-mode</span>
+<span class="c1">;;   :config</span>
+<span class="c1">;;   (setq lsp-ui-doc-enable nil)</span>
+<span class="c1">;;   (setq lsp-ui-doc-header t)</span>
+<span class="c1">;;   (setq lsp-ui-doc-include-signature t)</span>
+<span class="c1">;;   (setq lsp-ui-doc-border (face-foreground &#39;default))</span>
+<span class="c1">;;   (setq lsp-ui-sideline-show-code-actions t)</span>
+<span class="c1">;;   (setq lsp-ui-sideline-delay 0.05))</span>
 <span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nv">display-graphic-p</span><span class="p">)</span>
 <span class="w">    </span><span class="p">(</span><span class="k">progn</span>
 <span class="w">      </span><span class="c1">;; if graphic</span>
@@ -427,6 +706,23 @@
 <span class="w">     </span><span class="o">,@</span><span class="nv">body</span>
 <span class="w">     </span><span class="p">(</span><span class="nf">float-time</span><span class="w"> </span><span class="p">(</span><span class="nv">time-since</span><span class="w"> </span><span class="nv">time</span><span class="p">))))</span>
 
+<span class="c1">;; config.el</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="ss">&#39;tera-mode</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">use-package!</span><span class="w"> </span><span class="nv">eee</span>
+<span class="w">  </span><span class="nb">:config</span>
+
+<span class="w">  </span><span class="c1">;; Should have wezterm or alacritty installed, more terminal application is supporting...</span>
+<span class="c1">;; Issues and pull requests are welcome</span>
+<span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">ee-terminal-command</span><span class="w"> </span><span class="s">&quot;alacritty&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-c C-o&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;ee-find</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-c C-l&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;ee-lazygit</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-c C-s&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;ee-line</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-c C-d&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;ee-delta</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="s">&quot;C-c C-a&quot;</span><span class="p">)</span><span class="w"> </span><span class="ss">&#39;ee-rg</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
+
+
 
 <span class="c1">;; When idle for 15sec run the GC no matter what.</span>
 <span class="p">(</span><span class="k">defvar</span><span class="w"> </span><span class="nv">k-gc-timer</span>
@@ -434,7 +730,7 @@
 <span class="w">                       </span><span class="p">(</span><span class="nb">lambda</span><span class="w"> </span><span class="p">()</span>
 <span class="w">                         </span><span class="p">(</span><span class="nf">message</span><span class="w"> </span><span class="s">&quot;Garbage Collector has run for %.06fsec&quot;</span>
 <span class="w">                                  </span><span class="p">(</span><span class="nv">k-time</span><span class="w"> </span><span class="p">(</span><span class="nf">garbage-collect</span><span class="p">))))))</span>
-</pre>
+</pre></div>
 
 			</details>
 		</div>
