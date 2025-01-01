@@ -41,7 +41,7 @@ code { font-family: 'Fira Code', monospace; }
 }
 
 .container {
-  max-width:900px;
+  max-width:800px;
 }
 .projects ul {
     text-align:justify;
