@@ -24,12 +24,16 @@ a:active { text-decoration: underline; }
 
 
 
-
-
-code { font-family: 'Fira Code', monospace; }
-
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: monospace;
+  font-display: swap;
+}
 @supports (font-variation-settings: normal) {
-  code { font-family: 'Fira Code VF', monospace; }
+  code { font-family: 'JetBrains Mono', monospace; }
 }
 
 :root{
@@ -37,8 +41,16 @@ code { font-family: 'Fira Code', monospace; }
   font-size:100%;
   line-height: 150%;
   --pico-font-family-sans-serif: 'Fira Code', monospace;
-  --pico-font-family: var(--pico-font-family-sans-serif);
+  /* --pico-font-family: var(--pico-font-family-sans-serif); */
+  --pico-font-family-monospace: 'JetBrains Mono', monospace;
 }
+
+
+ins {
+  font-size:95%;
+}
+
+
 
 .container {
   max-width:800px;
@@ -47,7 +59,7 @@ code { font-family: 'Fira Code', monospace; }
     text-align:justify;
 }
 
-Little more spacing between lists
+/* Little more spacing between lists */
 .projects li + li {
   margin-top: 10px;
 }
@@ -74,7 +86,7 @@ Little more spacing between lists
   flex-grow: 3;
   flex-basis: 170px;
 }
-notRackList {
+.notRackList {
   flex-grow: 1;
   flex-basis: 170px;
 }
