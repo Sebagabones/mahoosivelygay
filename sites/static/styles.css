@@ -72,7 +72,7 @@ ins {
 
 .spacing {
   padding-top: 2vh;
-  padding-bottom: 3vh;
+  padding-bottom: 2vh;
   display: flex;
   align-items: flex-top;
   flex-wrap: wrap;
@@ -83,7 +83,9 @@ ins {
   flex-grow: 3;
   flex-basis: 170px;
 }
+
 .notRackList {
+  padding-top: 1vh;
   flex-grow: 1;
   flex-basis: 170px;
 }
