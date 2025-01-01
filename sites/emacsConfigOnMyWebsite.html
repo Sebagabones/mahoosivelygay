@@ -28,14 +28,14 @@
 		<p>As you may hopefully have seen, I have my Emacs config files on my website (if not, well, they are <a
 				href="emacsFiles.html">here</a>).</p>
 		<p>Because I have a thing about making things look nice, I had to have syntax highlighting for these, and I had
-			to have these match the colourscheme (which is of course based of Catppuccin). I also wanted this to work
+			to have these match the colourscheme (which is of course based off of Catppuccin). I also wanted this to work
 			without JavaScript, and so I decided to use Pygments.</p>
 
 		<h5>Pygments</h5>
 		<div class="syntax">
-			<p>Pygments allowed me to generate a css style for the different styles I wanted to use (Catppuccin's latte
+			<p>Pygments allowed me to generate a css style for the different styles I wanted to use (Catppuccin's Latte
 				and
-				mocha), which once added to my css file, does not need any updating. This simply just defines a bunch of
+				Mocha), which once added to my css file, does not need any updating. This simply just defines a bunch of
 				colours for different classnames for spans in a parent div - to generate the css styles simply
 				run:<code><span class="sh">pygmentize </span> <span class="o">-f </span><span >html </span><span class="o">-S </span><span >catppuccin-style </span><span class="o">-a </span> <span >.syntax</span></code>
 				where <code>catppuccin-style</code> was either catppuccin-mocha or catppuccin-latte dependng if I was
@@ -60,7 +60,7 @@
 		<div class="syntax">
 			<p>As you can see by the second example, this would be very unfun to do by hand. Thankfully, Pygments
 				supports a
-				lot of languages, and so I can simply pass in my <code>.el</code> files, and have Pygments output the
+				lot of languages, and so I can simply pass in my <ins>*.el</ins> files, and have Pygments output the
 				HTML
 				version of them. The command I used for this was
 				<code><span class="sh">pygmentize </span><span class="k">example.el </span> <span class="o">-O </span><span >cssclass=syntax </span><span class="o">-o </span><span class="k">example.el.html </span></code>.
@@ -68,7 +68,7 @@
 		</div>
 		<h5>SSRI</h5>
 		<p> Here is where <a href="ssri.html">SSRI</a> comes in - I did not want to setup some janky regex to update the
-			<code>emacsConfig.html</code> file (yes, I have read this <a
+			<ins>emacsConfig.html</ins> file (yes, I have read this <a
 				href="https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags">classic</a>)
 			everytime I changed my config files (which, being an Emacs user, is about every two minutes). So, yes, to
 			make sure my config files are updated on my website I went away and built a templating engine - good use of
@@ -76,7 +76,7 @@
 		</p>
 
 		<h5>Recap so far</h5>
-		<p>Okay, so currently we have covered that I needed to generate HTML files from my <code>*.el</code> files with
+		<p>Okay, so currently we have covered that I needed to generate HTML files from my <ins>*.el</ins> files with
 			Pygments, and
 			then include them in my website using SSRI. Seems pretty simply, you could just do a git repo for you Emacs
 			files and write a small script to run pygments on each file in there, and then link those to your website
@@ -84,7 +84,7 @@
 
 		<h5>Capistrano</h5>
 		<p>What if, instead of doing that, I used Capistrano to automatically deploy my Emacs config files to my
-			webserver, and then to build the new <code>*.el.html</code> files, and then rerun SSRI to automatically
+			webserver, and then to build the new <ins>*.el.html</ins> files, and then rerun SSRI to automatically
 			update my emacs config files with a single command? So I did that, turns out Rake files are weird and wild
 			beasts, but I kind of like them (along with ruby) now lol.</p>
 		<h6>Workflow</h6>
@@ -188,7 +188,7 @@
 		</p>
 		<p class=syntax>
 
-			This task takes the config files, and runs Pygments on them, creating the <code>*.el.html</code> files, and
+			This task takes the config files, and runs Pygments on them, creating the <ins>*.el.html</ins> files, and
 			then invokes the <code><span class="kt">:cpPressri</span></code> task.
 		<details open>
 			<summary>
@@ -241,7 +241,7 @@
 
 		</details>
 		<p>
-		This runs SSRI on directory, adding the newly generated <code>*.el.html</code> files to <code>emacsFiles.html</code>.
+		This runs SSRI on directory, adding the newly generated <ins>*.el.html</ins> files to <ins>emacsFiles.html</ins>.
 		</p>
 
 		<h5>Closing thoughts</h5>
