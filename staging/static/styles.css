@@ -31,13 +31,18 @@ code { font-family: 'Fira Code', monospace; }
 @supports (font-variation-settings: normal) {
   code { font-family: 'Fira Code VF', monospace; }
 }
+
 :root{
   font-family: 'Fira Code', monospace;
+  font-size:100%;
+  line-height: 150%;
   --pico-font-family-sans-serif: 'Fira Code', monospace;
   --pico-font-family: var(--pico-font-family-sans-serif);
 }
 
-
+.container {
+  max-width:900px;
+}
 .projects ul {
     text-align:justify;
 }
