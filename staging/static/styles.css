@@ -28,9 +28,58 @@ html[data-theme=dark] {
 
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
-a:hover { text-decoration: underline; }
-a:active { text-decoration: underline; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
+a {
+  background:
+    linear-gradient(
+      to right,
+      var(--pico-background-color),
+      var(--pico-background-color)
+    ),
+    linear-gradient(
+      to right,
+        var(--pico-ctp-red),
+        var(--pico-ctp-peach),
+        var(--pico-ctp-yellow),
+        var(--pico-ctp-blue),
+        var(--pico-ctp-mauve)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms, color 0.5s;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.themeButton {
+  color:var(--pico-ctp-mauve);
+  background:var(--pico-background-color);
+  background-color: var(--pico-background-color);
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+}
+.themeButton:hover {
+  color:var(--pico-ctp-lavender);
+}
+
+.HeaderMainLink:link {
+  color:var(--pico-ctp-lavender);
+}
+.HeaderMainLink:visited {
+  color:var(--pico-ctp-lavender);
+}
+.HeaderMainLink:hover {
+  color:var(--pico-ctp-sky);
+}
+.HeaderMainLink:active {
+  color:var(--pico-ctp-lavender);
+}
 
 
 :root{
@@ -126,6 +175,20 @@ ins {
 /* Can be forced with data-theme="light" */
 [data-theme=light],
 :root:not([data-theme=dark]) {
+  --pico-ctp-rosewater:#dc8a78;
+  --pico-ctp-flamingo:#dd7878;
+  --pico-ctp-pink:#ea76cb;
+  --pico-ctp-mauve: #8839ef;
+  --pico-ctp-red:#d20f39;
+  --pico-ctp-maroon:#e64553;
+  --pico-ctp-peach:#fe640b;
+  --pico-ctp-yellow:#df8e1d;
+  --pico-ctp-green:#40a02b;
+  --pico-ctp-teal:#179299;
+  --pico-ctp-sky:#04a5e5;
+  --pico-ctp-sapphire:#209fb5;
+  --pico-ctp-blue:#1e66f5;
+  --pico-ctp-lavender:#7287fd;
   --pico-text-selection-color: #ccd0da; /*Surface 0*/
   --pico-primary:#8839ef;              /*Mauve*/
   --pico-color: #4c4f69;                /*Text*/
@@ -149,6 +212,8 @@ ins {
   --pico-h4-color: #5c5f77;
   --pico-h5-color: #6c6f85;
   --pico-h6-color: #6c6f85;
+
+
 
   /*BELOW IS PYGMENTS STYLING  */
   pre { line-height: 125%; }
@@ -241,7 +306,21 @@ ins {
 
 @media only screen and (prefers-color-scheme: light) {
   :root:not([data-theme]) {
---pico-text-selection-color: #ccd0da; /*Surface 0*/
+  --pico-ctp-rosewater:#dc8a78;
+  --pico-ctp-flamingo:#dd7878;
+  --pico-ctp-pink:#ea76cb;
+  --pico-ctp-mauve: #8839ef;
+  --pico-ctp-red:#d20f39;
+  --pico-ctp-maroon:#e64553;
+  --pico-ctp-peach:#fe640b;
+  --pico-ctp-yellow:#df8e1d;
+  --pico-ctp-green:#40a02b;
+  --pico-ctp-teal:#179299;
+  --pico-ctp-sky:#04a5e5;
+  --pico-ctp-sapphire:#209fb5;
+  --pico-ctp-blue:#1e66f5;
+  --pico-ctp-lavender:#7287fd;
+  --pico-text-selection-color: #ccd0da; /*Surface 0*/
   --pico-primary:#8839ef;              /*Mauve*/
   --pico-color: #4c4f69;                /*Text*/
   --pico-background-color: #eff1f5;    /*Base*/
@@ -360,6 +439,20 @@ ins {
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
+  --pico-ctp-rosewater:#f5e0dc;
+  --pico-ctp-flamingo:#f2cdcd;
+  --pico-ctp-pink:#f5c2e7;
+  --pico-ctp-mauve: #cba6f7;
+  --pico-ctp-red:#f38ba8;
+  --pico-ctp-maroon:#eba0ac;
+  --pico-ctp-peach:#fab387;
+  --pico-ctp-yellow:#f9e2af;
+  --pico-ctp-green:#a6e3a1;
+  --pico-ctp-teal:#94e2d5;
+  --pico-ctp-sky:#89dceb;
+  --pico-ctp-sapphire:#74c7ec;
+  --pico-ctp-blue:#89b4fa;
+  --pico-ctp-lavender:#b4befe;
   --pico-text-selection-color:  #313244; /*Surface 0*/
   --pico-primary: #cba6f7;              /*Mauve*/
   --pico-color: #cdd6f4;                /*Text*/
@@ -477,6 +570,20 @@ ins {
 /* Orange color for dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme=dark] {
+  --pico-ctp-rosewater:#f5e0dc;
+  --pico-ctp-flamingo:#f2cdcd;
+  --pico-ctp-pink:#f5c2e7;
+  --pico-ctp-mauve: #cba6f7;
+  --pico-ctp-red:#f38ba8;
+  --pico-ctp-maroon:#eba0ac;
+  --pico-ctp-peach:#fab387;
+  --pico-ctp-yellow:#f9e2af;
+  --pico-ctp-green:#a6e3a1;
+  --pico-ctp-teal:#94e2d5;
+  --pico-ctp-sky:#89dceb;
+  --pico-ctp-sapphire:#74c7ec;
+  --pico-ctp-blue:#89b4fa;
+  --pico-ctp-lavender:#b4befe;
   --pico-text-selection-color: #313244; /*Surface 0*/
   --pico-primary: #cba6f7;              /*Mauve*/
   --pico-color: #cdd6f4;                /*Text*/
