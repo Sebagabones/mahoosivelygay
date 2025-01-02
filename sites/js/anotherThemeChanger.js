@@ -1,3 +1,5 @@
+
+// This filename is a terrible inaccurate - this doesnt change themes, it just checks if a theme has already been set before loading the page
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
   if (localStorageTheme !== null) {
     return localStorageTheme;
