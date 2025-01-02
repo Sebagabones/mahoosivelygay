@@ -94,7 +94,7 @@
 				<h4 style="display:inline"><code>hooks.rake</code></h4>
 			</summary>
 			<div class="syntax">
-				<pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="n">before</span><span class="w"> </span><span class="s1">&#39;deploy:starting&#39;</span><span class="p">,</span><span class="w"> </span><span class="ss">:uptime</span>
 <span class="n">before</span><span class="w"> </span><span class="s1">&#39;deploy:starting&#39;</span><span class="p">,</span><span class="w"> </span><span class="ss">:gitpush</span>
@@ -102,7 +102,8 @@
 
 <span class="n">after</span><span class="w"> </span><span class="s1">&#39;deploy:updated&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pygments:pygmentsSetup&#39;</span>
 </pre>
-			</div>
+</div>
+
 		</details>
 		<p class=syntax>
 			The first thing that I want to happen when I run
@@ -115,7 +116,7 @@
 				<h4 style="display:inline"><code>uptime.rake</code></h4>
 			</summary>
 			<div class="syntax">
-				<pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="n">desc</span><span class="w"> </span><span class="s2">&quot;Report Uptimes&quot;</span>
 <span class="n">task</span><span class="w"> </span><span class="ss">:uptime</span><span class="w"> </span><span class="k">do</span>
@@ -125,7 +126,8 @@
 <span class="w">  </span><span class="k">end</span>
 <span class="k">end</span>
 </pre>
-			</div>
+</div>
+
 
 		</details>
 		<p class=syntax>
@@ -138,7 +140,7 @@
 				<h4 style="display:inline"><code>gitCommit.rake</code></h4>
 			</summary>
 			<div class="syntax">
-				<pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="n">desc</span><span class="w"> </span><span class="s1">&#39;push local repo to git&#39;</span>
 <span class="n">task</span><span class="w"> </span><span class="ss">:gitpush</span><span class="w"> </span><span class="k">do</span>
@@ -151,7 +153,8 @@
 <span class="w">  </span><span class="k">end</span>
 <span class="k">end</span>
 </pre>
-			</div>
+</div>
+
 		</details>
 		<p class=syntax>
 			Now for the fun part, where we actually deploy the files - we wait until after the <code
@@ -162,7 +165,7 @@
 				<h4 style="display:inline"><code>pygments.rake</code></h4>
 			</summary>
 			<div class="syntax">
-				<pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="n">namespace</span><span class="w"> </span><span class="ss">:pygments</span><span class="w"> </span><span class="k">do</span>
 <span class="w">  </span><span class="no">ARRAY</span><span class="o">=</span><span class="sx">%w{config.el packages.el init.el}</span><span class="p">;</span>
@@ -182,7 +185,7 @@
 <span class="w">  </span><span class="k">end</span>
 <span class="k">end</span>
 </pre>
-			</div>
+</div>
 
 		</details>
 		</p>
@@ -195,7 +198,7 @@
 				<h4 style="display:inline"><code>cpPreSSRI.rake</code></h4>
 			</summary>
 			<div class="syntax">
-				<pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="n">newarray</span><span class="o">=</span><span class="sx">%w{config.el.html packages.el.html init.el.html}</span><span class="p">;</span>
 <span class="n">desc</span><span class="w"> </span><span class="s2">&quot;Copies files to right location before ssri&quot;</span>
@@ -210,7 +213,8 @@
 <span class="w">  </span><span class="n">invoke</span><span class="p">(</span><span class="ss">:ssriRun</span><span class="p">)</span>
 <span class="k">end</span>
 </pre>
-			</div>
+</div>
+
 		</details>
 		</p>
 		<p class="syntax">
@@ -222,7 +226,7 @@
 				<h4 style="display:inline"><code>ssriRun.rake</code></h4>
 			</summary>
 			<div class="syntax">
-				<pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
 
 <span class="n">mainDirLoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/webserver/dir/path/&quot;</span>
 <span class="n">desc</span><span class="w"> </span><span class="s2">&quot;Runs ssri&quot;</span>
@@ -237,7 +241,7 @@
 <span class="w">  </span><span class="k">end</span>
 <span class="k">end</span>
 </pre>
-			</div>
+</div>
 
 		</details>
 		<p>
