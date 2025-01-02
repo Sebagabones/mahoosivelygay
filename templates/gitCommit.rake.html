@@ -1,0 +1,15 @@
+<div class="syntax">
+    <pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+
+<span class="n">desc</span><span class="w"> </span><span class="s1">&#39;push local repo to git&#39;</span>
+<span class="n">task</span><span class="w"> </span><span class="ss">:gitpush</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="n">run_locally</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="n">timeOfPushCommitMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">capture</span><span class="p">(</span><span class="ss">:date</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="n">execute</span><span class="w"> </span><span class="ss">:git</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.&quot;</span>
+<span class="w">    </span><span class="n">execute</span><span class="w"> </span><span class="ss">:git</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;commit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-m&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">timeOfPushCommitMessage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&#39;&quot;</span>
+<span class="w">    </span><span class="n">execute</span><span class="w"> </span><span class="ss">:git</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;push&quot;</span>
+
+<span class="w">  </span><span class="k">end</span>
+<span class="k">end</span>
+</pre>
+</div>
