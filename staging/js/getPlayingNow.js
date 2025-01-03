@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   async function fetchData() {
     try {
       // const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-      const response = await fetch('http://api.mahoosively.gay/getNowPlaying');
+      const response = await fetch('https://api.mahoosively.gay/getNowPlaying');
 
       const data = await response.json();
       return data;

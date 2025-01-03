@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function fetchData() {
   try {
     // const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const response = await fetch('http://api.mahoosively.gay/getTopTracks');
+    const response = await fetch('https://api.mahoosively.gay/getTopTracks');
 
     const data = await response.json();
     return data;
