@@ -16,7 +16,7 @@ const localStorageTheme = localStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
-console.log(currentThemeSetting);
+// console.log(currentThemeSetting);
 
 document.documentElement.querySelector("html")?.setAttribute(this.rootAttribute, currentThemeSetting);
 const cachedTheme = localStorage.getItem("theme");
