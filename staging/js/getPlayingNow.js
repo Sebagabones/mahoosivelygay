@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       paragraph.textContent = `Sadly, I am currently not listening to anything - but you can still see my top songs below:`;
 
     }
-    console.log(paragraph)
+
     card.appendChild(paragraph);
     container.appendChild(card);
   }
