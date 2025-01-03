@@ -25,6 +25,12 @@ html[data-theme=dark] {
   color-scheme: dark;
 }
 
+.topTracksList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
@@ -81,7 +87,18 @@ a:hover {
   color:var(--pico-ctp-lavender);
 }
 
+.cardSongs {
+    /* background-color: red; */
+  max-width: 88vw;
+  background-color: var(--pico-ctp-mantle);
+}
+.getTopTracks {
+  padding-top: 1vh;
+}
+.playingNow {
+    padding-top: 2vh;
 
+}
 :root{
   font-family: 'Fira Code', monospace;
   font-size:100%;
@@ -188,6 +205,7 @@ ins {
   --pico-ctp-sapphire:#209fb5;
   --pico-ctp-blue:#1e66f5;
   --pico-ctp-lavender:#7287fd;
+  --pico-ctp-mantle:##e6e9ef;
   --pico-text-selection-color: #ccd0da; /*Surface 0*/
   --pico-primary:#8839ef;              /*Mauve*/
   --pico-color: #4c4f69;                /*Text*/
@@ -211,6 +229,10 @@ ins {
   --pico-h4-color: #5c5f77;
   --pico-h5-color: #6c6f85;
   --pico-h6-color: #6c6f85;
+  --pico-card-background-color: var(--pico-ctp-mantle);
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: var(--pico-text-selection-color);
 
 
 
@@ -319,6 +341,7 @@ ins {
   --pico-ctp-sapphire:#209fb5;
   --pico-ctp-blue:#1e66f5;
   --pico-ctp-lavender:#7287fd;
+  --pico-ctp-mantle:##e6e9ef;
   --pico-text-selection-color: #ccd0da; /*Surface 0*/
   --pico-primary:#8839ef;              /*Mauve*/
   --pico-color: #4c4f69;                /*Text*/
@@ -342,6 +365,11 @@ ins {
   --pico-h4-color: #5c5f77;
   --pico-h5-color: #6c6f85;
   --pico-h6-color: #6c6f85;
+  --pico-card-background-color: var(--pico-ctp-mantle);
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: var(--pico-text-selection-color);
+
 
   /*BELOW IS PYGMENTS STYLING  */
   pre { line-height: 125%; }
@@ -452,6 +480,7 @@ ins {
   --pico-ctp-sapphire:#74c7ec;
   --pico-ctp-blue:#89b4fa;
   --pico-ctp-lavender:#b4befe;
+  --pico-ctp-mantle:#181825;
   --pico-text-selection-color:  #313244; /*Surface 0*/
   --pico-primary: #cba6f7;              /*Mauve*/
   --pico-color: #cdd6f4;                /*Text*/
@@ -475,6 +504,11 @@ ins {
   --pico-h4-color: #bac2de;
   --pico-h5-color: #a6adc8;
   --pico-h6-color: #a6adc8;
+  --pico-card-background-color: var(--pico-ctp-mantle);
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: var(--pico-text-selection-color);
+
 
 /*BELOW IS PYGMENTS STYLING  */
   pre { line-height: 125%; }
@@ -583,6 +617,7 @@ ins {
   --pico-ctp-sapphire:#74c7ec;
   --pico-ctp-blue:#89b4fa;
   --pico-ctp-lavender:#b4befe;
+  --pico-ctp-mantle:#181825;
   --pico-text-selection-color: #313244; /*Surface 0*/
   --pico-primary: #cba6f7;              /*Mauve*/
   --pico-color: #cdd6f4;                /*Text*/
@@ -606,7 +641,10 @@ ins {
   --pico-h4-color: #bac2de;
   --pico-h5-color: #a6adc8;
   --pico-h6-color: #a6adc8;
-
+  --pico-card-background-color: var(--pico-ctp-mantle);
+  --pico-card-border-color: var(--pico-muted-border-color);
+  --pico-card-box-shadow: var(--pico-box-shadow);
+  --pico-card-sectioning-background-color: var(--pico-text-selection-color);
 
 
   /*BELOW IS PYGMENTS STYLING  */
