@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error fetching data:', error);
     }
   }
+  const ready = document.getElementById('ready');
+  function showLoad(){
+    ready.ariaBusy = true;
 
+  }
+
+  function hideLoad(){
+    ready.ariaBusy = false;
+  }
   // Function to render data in cards
   async function renderData() {
     const container = document.querySelector('.playingNow');
@@ -36,9 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     card.appendChild(paragraph);
     container.appendChild(card);
+    hideLoad()
   }
 
   // Call the renderData function to display data
+  showLoad()
   renderData();
 
   // // document.addEventListener('DOMContentLoaded', () => {
