@@ -219,8 +219,13 @@
                     return createElement(
                         'div',
                         null,
-                        createElement(NowPlayingNotPlaying)
-                    );
+                        createElement(NowPlayingNotPlaying),
+                        createElement(
+                            'button',
+                            { className: "container secondary", onClick: handleRefresh },
+                            "Refresh Now Playing"
+                        )
+                        );
                 }
 
                 // Fallback for any other case
