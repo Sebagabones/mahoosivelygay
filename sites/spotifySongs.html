@@ -31,8 +31,9 @@
 </header>
 
     <main>
+        <h2>A live tracker of what I am listening to on Spotify</h2>
+        <i>Honestly, this does a better job of telling you more about my current mood than my music taste, but no matter.</i>
         <div id=mainDiv></div>
-
 
         <script type="module">
             import { createElement, useState, useEffect } from "https://esm.sh/react";
@@ -78,8 +79,6 @@
                 return createElement(
                     'div',
                     null,
-                    createElement('h2', null, 'A live tracker of what I am listening to on Spotify'),
-                    createElement('i', null, 'Honestly, this does a better job of telling you more about my current mood than my music taste, but no matter.'),
                     createElement(
                         'div',
                         { className: "nowPlayingOrLoading", style: {minHeight: '160px'}},
@@ -145,7 +144,16 @@
                 return createElement(
                     'div',
                     { className: 'getTopTracks' },
-                    songList
+                    songList,
+                    createElement(
+                        'footer',
+                        { className: "container", style: {paddingTop: "3.5vh"}},
+                        createElement(
+                            'a',
+                            {href:'/'},
+                            'Main Page'
+                        )
+                    )
                 );
 
             }
@@ -237,10 +245,6 @@
             root.render(createElement(MainDiv));
         </script>
     </main>
-
-    	<footer class="container">
-		<a href="/"> Main Page </a>
-	</footer>
 
 
 
