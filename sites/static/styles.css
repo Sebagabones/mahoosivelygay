@@ -88,8 +88,6 @@ a:hover {
 }
 
 .cardSongs {
-    /* background-color: red; */
-  max-width: 88vw;
   background-color: var(--pico-ctp-mantle);
 }
 .getTopTracks {
@@ -206,34 +204,47 @@ ins {
   --pico-ctp-blue:#1e66f5;
   --pico-ctp-lavender:#7287fd;
   --pico-ctp-mantle:##e6e9ef;
-  --pico-text-selection-color: #ccd0da; /*Surface 0*/
-  --pico-primary:#8839ef;              /*Mauve*/
-  --pico-color: #4c4f69;                /*Text*/
-  --pico-background-color: #eff1f5;    /*Base*/
-  --pico-code-background-color: #eff1f5;  /*Base*/
-  --pico-primary-background:#e6e9ef;  /*Mantle*/
-  --pico-primary-underline: #209fb5;   /*Sapphire*/
-  --pico-primary-hover: #7287fd; /*Lavander*/
-  --pico-primary-hover-background: #1e66f5; /*Blue*/
-  --pico-primary-focus: #179299;             /*Teal*/
-  --pico-primary-inverse: #5c5f77; /*SubText1*/
-  --pico-muted-border-color: #7287fd;
-  --pico-muted-color: #9ca0b0;           /*Overlay0*/
-  --pico-ins-color:  #ea76cb;              /*Pink*/
-  --pico-primary-border: #209fb5;
-  --pico-accordion-close-summary-color: var(--pico-primary);
-  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-ctp-overlay0:#9ca0b0;
+  --pico-ctp-surface2:#acb0be;
+  --pico-ctp-surface1: #bcc0cc;
+  --pico-ctp-surface0:#ccd0da;
+  --pico-ctp-crust:#dce0e8;
+  --pico-ctp-text: #4c4f69;
+  --pico-ctp-subtext:#5c5f77;
+  --pico-ctp-base: #eff1f5;
   --pico-h1-color: #4c4f69;
   --pico-h2-color: #4c4f69;
   --pico-h3-color: #5c5f77;
   --pico-h4-color: #5c5f77;
   --pico-h5-color: #6c6f85;
   --pico-h6-color: #6c6f85;
+
+  --pico-text-selection-color: var(--pico-ctp-surface0); /*Surface 0*/
+  --pico-primary: var(--pico-ctp-mauve);              /*Mauve*/
+  --pico-color: var(--pico-ctp-text);                /*Text*/
+  --pico-background-color: var(--pico-ctp-base);    /*Base*/
+  --pico-code-background-color: var(--pico-ctp-base);  /*Base*/
+  --pico-primary-background: var(--pico-ctp-surface0);
+  --pico-primary-hover-background: var(--pico-ctp-surface1);
+  --pico-primary-underline:  var(--pico-ctp-sapphire);   /*Sapphire*/
+  --pico-primary-hover: var(--pico-ctp-lavender); /*Lavander*/
+  --pico-primary-focus: var(--pico-ctp-teal);             /*Teal*/
+  --pico-primary-inverse: #bac2de; /*SubText1*/
+  --pico-muted-border-color: var(--pico-ctp-lavender);
+  --pico-muted-color: var(--pico-ctp-overlay0);           /*Overlay0*/
+  --pico-ins-color: var(--pico-ctp-pink);              /*Pink*/
+  --pico-primary-border: var(--pico-ctp-lavender);
+  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-accordion-close-summary-color: var(--pico-primary);
   --pico-card-background-color: var(--pico-ctp-mantle);
   --pico-card-border-color: var(--pico-muted-border-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
   --pico-card-sectioning-background-color: var(--pico-text-selection-color);
-
+  --pico-secondary-background: var(--pico-ctp-surface0); /*surface0*/
+  --pico-secondary-hover-background: var(--pico-ctp-surface2); /*surface2*/
+  --pico-secondary-inverse: var(--pico-ctp-text);
+  --pico-secondary-border: var(--pico-ctp-mauve);
+  --pico-secondary-hover-border: var(--pico-ctp-lavender);
 
 
   /*BELOW IS PYGMENTS STYLING  */
@@ -342,33 +353,49 @@ ins {
   --pico-ctp-blue:#1e66f5;
   --pico-ctp-lavender:#7287fd;
   --pico-ctp-mantle:##e6e9ef;
-  --pico-text-selection-color: #ccd0da; /*Surface 0*/
-  --pico-primary:#8839ef;              /*Mauve*/
-  --pico-color: #4c4f69;                /*Text*/
-  --pico-background-color: #eff1f5;    /*Base*/
-  --pico-code-background-color: #eff1f5;  /*Base*/
-  --pico-primary-background:#e6e9ef;  /*Mantle*/
-  --pico-primary-underline: #209fb5;   /*Sapphire*/
-  --pico-primary-hover: #7287fd; /*Lavander*/
-  --pico-primary-hover-background: #1e66f5; /*Blue*/
-  --pico-primary-focus: #179299;             /*Teal*/
-  --pico-primary-inverse: #5c5f77; /*SubText1*/
-  --pico-muted-border-color: #7287fd;
-  --pico-muted-color: #9ca0b0;           /*Overlay0*/
-  --pico-ins-color:  #ea76cb;              /*Pink*/
-  --pico-primary-border: #209fb5;
-  --pico-accordion-close-summary-color: var(--pico-primary);
-  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-ctp-overlay0:#9ca0b0;
+  --pico-ctp-surface2:#acb0be;
+  --pico-ctp-surface1: #bcc0cc;
+  --pico-ctp-surface0:#ccd0da;
+  --pico-ctp-crust:#dce0e8;
+  --pico-ctp-text: #4c4f69;
+
+
+  --pico-ctp-subtext:#5c5f77;
+  --pico-ctp-base: #eff1f5;
   --pico-h1-color: #4c4f69;
   --pico-h2-color: #4c4f69;
   --pico-h3-color: #5c5f77;
   --pico-h4-color: #5c5f77;
   --pico-h5-color: #6c6f85;
   --pico-h6-color: #6c6f85;
+
+  --pico-text-selection-color: var(--pico-ctp-surface0); /*Surface 0*/
+  --pico-primary: var(--pico-ctp-mauve);              /*Mauve*/
+  --pico-color: var(--pico-ctp-text);                /*Text*/
+  --pico-background-color: var(--pico-ctp-base);    /*Base*/
+  --pico-code-background-color: var(--pico-ctp-base);  /*Base*/
+  --pico-primary-background: var(--pico-ctp-surface0);
+  --pico-primary-hover-background: var(--pico-ctp-surface1);
+  --pico-primary-underline:  var(--pico-ctp-sapphire);   /*Sapphire*/
+  --pico-primary-hover: var(--pico-ctp-lavender); /*Lavander*/
+  --pico-primary-focus: var(--pico-ctp-teal);             /*Teal*/
+  --pico-primary-inverse: #bac2de; /*SubText1*/
+  --pico-muted-border-color: var(--pico-ctp-lavender);
+  --pico-muted-color: var(--pico-ctp-overlay0);           /*Overlay0*/
+  --pico-ins-color: var(--pico-ctp-pink);              /*Pink*/
+  --pico-primary-border: var(--pico-ctp-lavender);
+  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-accordion-close-summary-color: var(--pico-primary);
   --pico-card-background-color: var(--pico-ctp-mantle);
   --pico-card-border-color: var(--pico-muted-border-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
   --pico-card-sectioning-background-color: var(--pico-text-selection-color);
+  --pico-secondary-background: var(--pico-ctp-surface0); /*surface0*/
+  --pico-secondary-hover-background: var(--pico-ctp-surface2); /*surface2*/
+  --pico-secondary-inverse: var(--pico-ctp-text);
+  --pico-secondary-border: var(--pico-ctp-mauve);
+  --pico-secondary-hover-border: var(--pico-ctp-lavender);
 
 
   /*BELOW IS PYGMENTS STYLING  */
@@ -481,33 +508,49 @@ ins {
   --pico-ctp-blue:#89b4fa;
   --pico-ctp-lavender:#b4befe;
   --pico-ctp-mantle:#181825;
-  --pico-text-selection-color:  #313244; /*Surface 0*/
-  --pico-primary: #cba6f7;              /*Mauve*/
-  --pico-color: #cdd6f4;                /*Text*/
-  --pico-background-color: #1e1e2e;    /*Base*/
-  --pico-code-background-color: #1e1e2e;  /*Base*/
-  --pico-primary-background: #181825;  /*Mantle*/
-  --pico-primary-underline: #74c7ec;   /*Sapphire*/
-  --pico-primary-hover: #b4befe; /*Lavander*/
-  --pico-primary-hover-background: #89b4fa; /*Blue*/
-  --pico-primary-focus: #94e2d5;             /*Teal*/
-  --pico-primary-inverse: #bac2de; /*SubText1*/
-  --pico-muted-border-color: #b4befe;
-  --pico-muted-color: #6c7086;           /*Overlay0*/
-  --pico-ins-color: #f5c2e7;              /*Pink*/
-  --pico-primary-border: #74c7ec;
-  --pico-accordion-close-summary-color: var(--pico-primary);
-  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-ctp-overlay0:#6c7086;
+  --pico-ctp-surface2:#5b6078;
+  --pico-ctp-surface1: #45475a;
+  --pico-ctp-surface0:#313244;
+  --pico-ctp-crust:#11111b;
+  --pico-ctp-text: #cdd6f4;
+  --pico-ctp-subtext: #bac2de;
+  --pico-ctp-base: #1e1e2e;
   --pico-h1-color: #cdd6f4;
   --pico-h2-color: #cdd6f4;
   --pico-h3-color: #bac2de;
   --pico-h4-color: #bac2de;
   --pico-h5-color: #a6adc8;
   --pico-h6-color: #a6adc8;
+
+  --pico-secondary-background: #5b6078;
+  --pico-secondary-hover-background: #363a4f;
+  --pico-text-selection-color: var(--pico-ctp-surface0); /*Surface 0*/
+  --pico-primary: var(--pico-ctp-mauve);              /*Mauve*/
+  --pico-color: var(--pico-ctp-text);                /*Text*/
+  --pico-background-color: var(--pico-ctp-base);    /*Base*/
+  --pico-code-background-color: var(--pico-ctp-base);  /*Base*/
+  --pico-primary-background: var(--pico-ctp-surface0);
+  --pico-primary-hover-background: var(--pico-ctp-surface1);
+  --pico-primary-underline:  var(--pico-ctp-sapphire);   /*Sapphire*/
+  --pico-primary-hover: var(--pico-ctp-lavender); /*Lavander*/
+  --pico-primary-focus: var(--pico-ctp-teal);             /*Teal*/
+  --pico-primary-inverse: #bac2de; /*SubText1*/
+  --pico-muted-border-color: var(--pico-ctp-lavender);
+  --pico-muted-color: var(--pico-ctp-overlay0);           /*Overlay0*/
+  --pico-ins-color: var(--pico-ctp-pink);              /*Pink*/
+  --pico-primary-border: var(--pico-ctp-lavender);
+  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-accordion-close-summary-color: var(--pico-primary);
   --pico-card-background-color: var(--pico-ctp-mantle);
   --pico-card-border-color: var(--pico-muted-border-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
   --pico-card-sectioning-background-color: var(--pico-text-selection-color);
+  --pico-secondary-background: var(--pico-ctp-surface0); /*surface0*/
+  --pico-secondary-hover-background: var(--pico-ctp-surface2); /*surface2*/
+  --pico-secondary-inverse: var(--pico-ctp-text);
+  --pico-secondary-border: var(--pico-ctp-mauve);
+  --pico-secondary-hover-border: var(--pico-ctp-lavender);
 
 
 /*BELOW IS PYGMENTS STYLING  */
@@ -618,33 +661,47 @@ ins {
   --pico-ctp-blue:#89b4fa;
   --pico-ctp-lavender:#b4befe;
   --pico-ctp-mantle:#181825;
-  --pico-text-selection-color: #313244; /*Surface 0*/
-  --pico-primary: #cba6f7;              /*Mauve*/
-  --pico-color: #cdd6f4;                /*Text*/
-  --pico-background-color: #1e1e2e;    /*Base*/
-  --pico-code-background-color: #1e1e2e;  /*Base*/
-  --pico-primary-background: #181825;  /*Mantle*/
-  --pico-primary-underline: #74c7ec;   /*Sapphire*/
-  --pico-primary-hover: #b4befe; /*Lavander*/
-  --pico-primary-hover-background: #89b4fa; /*Blue*/
-  --pico-primary-focus: #94e2d5;             /*Teal*/
-  --pico-primary-inverse: #bac2de; /*SubText1*/
-  --pico-muted-border-color: #b4befe;
-  --pico-muted-color: #6c7086;           /*Overlay0*/
-  --pico-ins-color: #f5c2e7;              /*Pink*/
-  --pico-primary-border: #74c7ec;
-  --pico-accordion-open-summary-color: var(--pico-primary-focus);
-  --pico-accordion-close-summary-color: var(--pico-primary);
+  --pico-ctp-overlay0:#6c7086;
+  --pico-ctp-surface2:#5b6078;
+  --pico-ctp-surface1: #45475a;
+  --pico-ctp-surface0:#313244;
+  --pico-ctp-crust:#11111b;
+  --pico-ctp-text: #cdd6f4;
+  --pico-ctp-subtext: #bac2de;
+  --pico-ctp-base: #1e1e2e;
   --pico-h1-color: #cdd6f4;
   --pico-h2-color: #cdd6f4;
   --pico-h3-color: #bac2de;
   --pico-h4-color: #bac2de;
   --pico-h5-color: #a6adc8;
   --pico-h6-color: #a6adc8;
+
+  --pico-text-selection-color: var(--pico-ctp-surface0); /*Surface 0*/
+  --pico-primary: var(--pico-ctp-mauve);              /*Mauve*/
+  --pico-color: var(--pico-ctp-text);                /*Text*/
+  --pico-background-color: var(--pico-ctp-base);    /*Base*/
+  --pico-code-background-color: var(--pico-ctp-base);  /*Base*/
+  --pico-primary-background: var(--pico-ctp-surface0);
+  --pico-primary-hover-background: var(--pico-ctp-surface1);
+  --pico-primary-underline:  var(--pico-ctp-sapphire);   /*Sapphire*/
+  --pico-primary-hover: var(--pico-ctp-lavender); /*Lavander*/
+  --pico-primary-focus: var(--pico-ctp-teal);             /*Teal*/
+  --pico-primary-inverse: #bac2de; /*SubText1*/
+  --pico-muted-border-color: var(--pico-ctp-lavender);
+  --pico-muted-color: var(--pico-ctp-overlay0);           /*Overlay0*/
+  --pico-ins-color: var(--pico-ctp-pink);              /*Pink*/
+  --pico-primary-border: var(--pico-ctp-lavender);
+  --pico-accordion-open-summary-color: var(--pico-primary-focus);
+  --pico-accordion-close-summary-color: var(--pico-primary);
   --pico-card-background-color: var(--pico-ctp-mantle);
   --pico-card-border-color: var(--pico-muted-border-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
   --pico-card-sectioning-background-color: var(--pico-text-selection-color);
+  --pico-secondary-background: var(--pico-ctp-surface0); /*surface0*/
+  --pico-secondary-hover-background: var(--pico-ctp-surface2); /*surface2*/
+  --pico-secondary-inverse: var(--pico-ctp-text);
+  --pico-secondary-border: var(--pico-ctp-mauve);
+  --pico-secondary-hover-border: var(--pico-ctp-lavender);
 
 
   /*BELOW IS PYGMENTS STYLING  */
